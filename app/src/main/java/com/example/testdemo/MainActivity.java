@@ -3,6 +3,7 @@ package com.example.testdemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     Button but = null;
     TextView tv = null;
     int startVal = 0;
+    String TAG = "MyMainAct";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +27,19 @@ public class MainActivity extends AppCompatActivity {
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int val = Integer.valueOf(tv.getText().toString()) * 2;
+                int val = Integer.parseInt(tv.getText().toString()) * 2;
                 tv.setText(String.valueOf(val));
             }
         });
 
+        //debugging
+        int divisor = 1;
+        Log.d("demoNow","divisor value: " + divisor);
+        int crash = 9/divisor;
+
+
 
     }
-
-
-
 
     //Lecture Demo
     public String getLastName(String firstName) {
