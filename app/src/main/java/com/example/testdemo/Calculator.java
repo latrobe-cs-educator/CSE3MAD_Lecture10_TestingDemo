@@ -14,4 +14,9 @@ public class Calculator {
         // if (op2 == 0) return 0;
         return op1 / op2;
     }
+
+    public int doubleValue(int op1)
+    {
+        return op1*2;
+    }
 }

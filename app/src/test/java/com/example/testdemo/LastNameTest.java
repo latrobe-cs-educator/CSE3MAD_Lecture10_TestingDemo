@@ -10,7 +10,7 @@ public class LastNameTest {
     public void getLastName() {
         MainActivity mainActivity = new MainActivity();
 
-        assertEquals("Mann", mainActivity.getLastName("Scott"));
+        assertEquals("Bozzetto", mainActivity.getLastName("Luke"));
         assertEquals("Doe", mainActivity.getLastName("Lucy"));
         assertEquals("Doe", mainActivity.getLastName(""));
     }
